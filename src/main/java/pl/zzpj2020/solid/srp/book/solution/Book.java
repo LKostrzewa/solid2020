@@ -1,9 +1,9 @@
-package pl.zzpj2020.solid.srp.book.violation;
+package pl.zzpj2020.solid.srp.book.solution;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class BookAndPrinter {
+public class Book {
 
     private int currentPage = 0;
 
@@ -27,13 +27,6 @@ public class BookAndPrinter {
 
     public void turnPage() {
         currentPage ++;
-    }
-
-    /**
-     * Prints the current page.
-     */
-    public void printCurrentPage() {
-        System.out.println(pages.get(currentPage));
     }
 
     /**
@@ -61,16 +54,7 @@ public class BookAndPrinter {
         return indexOnShelf;
     }
 
-    /**
-     * Prints all pages
-     * @return
-     */
-    public String printAllPages() {
-
-        String allPages = new String();
-        for(Map.Entry<Integer, String> page : pages.entrySet()) {
-            allPages += (page.getKey() + " " + page.getValue());
-        }
-        return  allPages;
+    public Map<Integer, String> getPages() {
+        return pages;
     }
 }
